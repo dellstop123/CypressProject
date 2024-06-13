@@ -1,0 +1,18 @@
+{
+  "name": "cypress_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:parallel": "cypress-parallel -s cy:run -t 3 -d 'cypress/e2e/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress-parallel": "^0.13.0"
+  },
+  "devDependencies": {
+    "cypress": "^13.11.0"
+  }
+}

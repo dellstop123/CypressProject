@@ -1,0 +1,14 @@
+[
+  {
+  "UserName": "hello@cypress.io",
+  "pwd": "12345678"  
+  },
+  {
+    "UserName": "hello@cypress.io",
+    "pwd": "12345678"  
+    },
+    {
+      "UserName": "Malathi",
+      "pwd": "Malathi@123"  
+      }
+]
