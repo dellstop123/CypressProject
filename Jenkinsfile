@@ -20,7 +20,7 @@ pipeline {
       stage('e2e Tests') {
 
                  steps {
-               sh 'npx cypress run'
+               sh 'npm run cy:parallel'
                  }
               }
       stage('Deploy') {
