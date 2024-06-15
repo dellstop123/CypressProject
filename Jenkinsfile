@@ -22,8 +22,7 @@ pipeline {
                  steps {
                     sh 'npm test'
             //    sh 'npm run cy:parallel',
-                //   sh 'npx cypress run --reporter mochawesome \ 
-                //    --reporter-options reportDir="cypress/results",overwrite=false,html=true,json=false'
+                //  sh 'npx cypress run --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=true,json=false'
                  }
               }
       stage('Deploy') {
