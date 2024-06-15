@@ -12,16 +12,17 @@ pipeline {
   stages {
       stage('Dependencies') {
           steps {
-              sh 'npm i'
-              sh 'npm i cypress'
-              sh 'npm install cypress-parallel'
+              sh 'npm ci'
+              sh 'npm run cy:verify'
+              //sh 'npm install cypress-parallel'
           }
       }
       stage('e2e Tests') {
 
                  steps {
+                    sh 'npm test'
             //    sh 'npm run cy:parallel',
-                  sh 'npx cypress run --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=true,json=false'
+                //  sh 'npx cypress run --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=true,json=false'
                  }
               }
       stage('Deploy') {
