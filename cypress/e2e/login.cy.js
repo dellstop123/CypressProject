@@ -1,8 +1,6 @@
 ///<require='cypress'>
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-  });
+import LoginPage from '../support/page_object/loginPage';
 
 describe('template spec', () => {
 
@@ -16,13 +14,18 @@ describe('template spec', () => {
 
   it('Login User with InValid Username and Password', function (){
     
-    cy.visit('https://guneet.pythonanywhere.com')
+    const loginPage = new LoginPage();
+    loginPage.visit()
+    // cy.visit('https://guneet.pythonanywhere.com')
   this.data.forEach(element => {
-    
-    cy.get("#username").type(element.UserName)
-    cy.get("#password").type("India@123")
-    cy.get('input[type="submit"]').click()
+    loginPage.fillUsername(element.UserName)
+    loginPage.fillPassword("India@123")
+    loginPage.submit()
+    // cy.get("#username").type(element.UserName)
+    // cy.get("#password").type("India@123")
+    // cy.get('input[type="submit"]').click()
     cy.get("p[class='error']").contains("Invalid username or password.")
+
   });
    
   })
