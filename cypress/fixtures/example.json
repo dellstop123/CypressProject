@@ -1,14 +1,17 @@
 [
   {
   "UserName": "hello@cypress.io",
-  "pwd": "12345678"  
+  "pwd": "12345678",
+  "value": "submit"
   },
   {
     "UserName": "hello@cypress.io",
-    "pwd": "12345678"  
+    "pwd": "12345678",
+    "value": "cancel" 
     },
     {
       "UserName": "Malathi",
-      "pwd": "Malathi@123"  
+      "pwd": "Malathi@123",
+      "value": "cancel"   
       }
 ]

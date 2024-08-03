@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-09T13:47:18.495Z",
+    "end": "2024-07-09T13:47:43.108Z",
+    "duration": 24613,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f786493-876e-4021-bf56-bbfb84463baf",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35a177b4-bddc-4846-82d9-4f6d95ca2a6c",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login User with InValid Username and Password",
+              "fullTitle": "template spec Login User with InValid Username and Password",
+              "timedOut": null,
+              "duration": 10946,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const loginPage = new _loginPage.default();\nloginPage.visit();\n// cy.visit('https://guneet.pythonanywhere.com')\nthis.data.forEach(element => {\n  loginPage.fillUsername(element.UserName);\n  loginPage.fillPassword(\"India@123\");\n  loginPage.submit();\n  // cy.get(\"#username\").type(element.UserName)\n  // cy.get(\"#password\").type(\"India@123\")\n  // cy.get('input[type=\"submit\"]').click()\n  cy.get(\"p[class='error']\").contains(\"Invalid username or password.\");\n});",
+              "err": {},
+              "uuid": "a3ec5e68-ea8c-4d82-be0d-aa81e9d88322",
+              "parentUUID": "35a177b4-bddc-4846-82d9-4f6d95ca2a6c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login User with Valid Username and Password",
+              "fullTitle": "template spec Login User with Valid Username and Password",
+              "timedOut": null,
+              "duration": 5926,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://guneet.pythonanywhere.com');\ncy.get(\"#username\").type(\"Malathi\");\ncy.get(\"#password\").type(\"Malathi@123\");\ncy.get('input[type=\"submit\"]').click();\ncy.title().should('eq', \"GitHub Open Source Projects\");",
+              "err": {},
+              "uuid": "8d4d48d5-671d-412f-a3d8-d6e6618c03cc",
+              "parentUUID": "35a177b4-bddc-4846-82d9-4f6d95ca2a6c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a3ec5e68-ea8c-4d82-be0d-aa81e9d88322",
+            "8d4d48d5-671d-412f-a3d8-d6e6618c03cc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16872,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
